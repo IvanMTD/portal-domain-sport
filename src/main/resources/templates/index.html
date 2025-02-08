@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-100" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title th:text="${title}"></title>
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/fw/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/fw/bootstrap-icons-1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+        <script src="/fw/jquery/dist/jquery.js"></script>
+    </head>
+
+    <body class="bg-light h-100">
+        <div class="toast-container position-fixed bottom-0 end-0 p-3" id="info-toast" style="transform: translate(-20px, 0)"></div>
+        <main class="h-100" th:insert="~{pages/home}" th:if="${page} == 'home'"></main>
+    </body>
+
+    <script src="/fw/core/dist/umd/popper.min.js"></script>
+    <script src="/fw/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/fw/configs/toast.controller.js"></script>
+    <script src="/fw/configs/tooltip.controller.js"></script>
+    <script src="/fw/configs/popover.controller.js"></script>
+</html>
