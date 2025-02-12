@@ -14,6 +14,8 @@
     <body class="bg-light h-100">
         <div class="toast-container position-fixed bottom-0 end-0 p-3" id="info-toast" style="transform: translate(-20px, 0)"></div>
         <main class="h-100" th:insert="~{pages/home}" th:if="${page} == 'home'"></main>
+        <main class="h-100" th:insert="~{pages/event}" th:if="${page} == 'event'"></main>
+        <main class="h-100" th:insert="~{pages/calendar}" th:if="${page} == 'calendar'"></main>
     </body>
 
     <script src="/fw/core/dist/umd/popper.min.js"></script>
