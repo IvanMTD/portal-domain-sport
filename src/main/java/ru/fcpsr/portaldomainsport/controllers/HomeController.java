@@ -1,4 +1,4 @@
-package ru.fcpsr.portaldomainsport.controllers.web;
+package ru.fcpsr.portaldomainsport.controllers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

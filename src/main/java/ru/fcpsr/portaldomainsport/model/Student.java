@@ -1,11 +1,14 @@
 package ru.fcpsr.portaldomainsport.model;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.NonFinal;
 
 @Data
-@Builder
+@RequiredArgsConstructor
+//@Builder
 public class Student {
+    @NonNull
     private String firstName;
+    @NonNull
     private String lastName;
 }
