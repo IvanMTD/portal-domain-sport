@@ -3,6 +3,7 @@ package ru.fcpsr.portaldomainsport.controllers.web;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -15,10 +16,11 @@ public class EventController {
         return "index";
     }
 
-    @GetMapping("/calendar")
-    public String eventCalendar(Model model){
+    @GetMapping("/calendar/{num}")
+    public String eventCalendar(Model model, @PathVariable int num){
         model.addAttribute("title","Календарь");
         model.addAttribute("page","calendar");
+        model.addAttribute("num",num);
         return "index";
     }
 }

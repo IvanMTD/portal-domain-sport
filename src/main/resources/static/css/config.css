@@ -49,3 +49,25 @@
         transform: scale(1);
     }
 }
+
+#alter-calendar {
+    cursor: grab;
+    user-select: none; /* Предотвращаем выделение текста */
+}
+
+#alter-calendar.grabbing {
+    cursor: grabbing;
+}
+
+#alter-calendar > * {
+    #pointer-events: none; /* Отключаем события мыши на дочерних элементах */
+}
+
+.zoom-in {
+    transform: scale(1.0);
+    transition: transform 0.2s;
+}
+
+.zoom-in:hover {
+    transform: scale(1.05);
+}
